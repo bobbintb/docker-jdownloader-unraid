@@ -9,16 +9,7 @@ LABEL maintainer="aptalca"
 ENV APPNAME="rmlint" UMASK_SET="022"
 
 RUN \
- echo "**** install rmlint ****" && \
-	apt-add-repository ppa:jd-team/jdownloader && \
-	apt-get update && \
-	apt-get install jdownloader-installer && \
- echo "**** cleanup ****" && \
- apt-get clean && \
- rm -rf \
-	/tmp/* \
-	/var/lib/apt/lists/* \
-	/var/tmp/*
+ echo "**** install rmlint ****" 
 
 # add local files
 COPY root/ /
